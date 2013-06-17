@@ -1,0 +1,19 @@
+
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700);
+
+body {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 100%;
+  text-align: left;
+  background: none;
+  color: #333;
+}
+
+/* clear the floats for all our IE friends*/
+.clear, form#commentform { zoom: 1; }
+
+/* Opacity for gallery thumbs */
+#gallery ul li a:hover img {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+}

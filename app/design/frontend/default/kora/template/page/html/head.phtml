@@ -1,0 +1,80 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+
+<!-- add jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/jquery.cookiecuttr.js"></script>
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-50322481361212bb"></script>
+<!-- AddThis Button END -->
+
+<script type="text/javascript">
+  if((navigator.userAgent.match(/iPad/i))) {
+    
+    var link = "<link type=\"text\/css\" rel=\"stylesheet\" media=\"all\" href=\"/skin/frontend/default/kora/css/ipad.css\" charset=\"utf-8\" \/>";
+    document.write(link);
+    document.write("<meta name=\"viewport\" content-width=1024px, minimum-scale=1.0, maximum-scale=1.0 \/>");
+  }
+  else if(navigator.userAgent.match(/iPhone/i)) {
+    document.write("<link type=\"text\/css\" rel=\"stylesheet\" media=\"all\" href=\"/skin/frontend/default/kora/css/iphone.css\" charset=\"utf-8\" \/>");
+    document.write("<meta name=\"viewport\" content-width=768px, minimum-scale=1.0, maximum-scale=1.0 \/>");
+  }
+  //else {
+  //  document.write("<link type=\"text\/css\" rel=\"stylesheet\" href=\"normal.css\" \/>");
+  //}
+</script>
+
+<link rel="stylesheet" href="/skin/frontend/default/kora/css/cookiecuttr.css">
+
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>

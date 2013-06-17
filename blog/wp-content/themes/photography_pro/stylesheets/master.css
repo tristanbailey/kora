@@ -1,0 +1,1064 @@
+/*---------------------------------------------------------
+
+	Stylesheet Overview
+
+------------------------------------------------------------
+
+	----- Table of Contents -----
+
+	1.  Reset
+	2.  Body and links
+	3.  Basic Structure
+	4.  Header
+	5.  Navigation
+	6.  Homepage
+	7.  Gallery
+	8.  Index layout
+	9.  Single layout
+	10. Pages
+	11. In post/page styling
+	12. Comments
+	13. Sidebar
+	14. Footer
+	15. Images and globals
+
+	----- Font / line-height sizing -----
+
+	Base font-size is 62.5% = 10px
+	1.2em = 12px
+
+	----- IMPORTANT NOTE -----
+
+	DO NOT make edits to this file, your edits will vanish
+	when you upgrade the theme. Instead add your custom CSS to
+	the style.css file in the pro child theme. Any new styles
+	you add there will automatically override this imported
+	stylesheet. This will also make your life a whole lot
+	easier when it comes time to upgrade the theme.
+*/
+
+/*---------------------------------------------------------
+	1. Reset
+------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { -ms-interpolation-mode: bicubic; }
+
+/*---------------------------------------------------------
+	2. Body and links
+------------------------------------------------------------ */
+body {
+	font: 62.5% Helvetica, "Helvetica Neue", Arial, sans-serif;
+	color: #a2a2a2;
+	line-height: 2.2em;
+	background: #292929 url(../images/body-bg.png) repeat left top;
+	min-width: 960px;
+}
+a:link,
+a:visited {
+	color: #999;
+	text-decoration: underline;
+}
+a:hover {
+	color: #dadada;
+}
+a.post-edit-link {
+	font-size: 13px;
+}
+
+/*---------------------------------------------------------
+	3. Basic Structure
+------------------------------------------------------------ */
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+#content {
+	float: left;
+	width: 628px;
+	padding: 0 20px 40px 0;
+}
+#content.full-width {
+	width: 940px;
+	padding: 0 0 40px 0;
+}
+#sidebar {
+	float: right;
+	padding: 0 20px;
+	width: 262px;
+}
+#footer {
+	clear: both;
+	margin-top: 30px;
+}
+.clear:after,
+li.comment:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+div.skip-content {
+	display: none;
+}
+
+/*---------------------------------------------------------
+	4. Header
+------------------------------------------------------------ */
+#header {
+	padding: 20px 0;
+}
+div.logo {
+	float: left;
+	margin: 20px 0;
+}
+#title, div.logo img {
+	margin: 10px 0 0 20px;
+	font-size: 3em;
+	font-weight: bold;
+}
+#title a {
+	color: #efefef;
+	text-shadow: 0 2px 0 #000;
+	text-decoration: none;
+}
+#title a:hover {
+	color: #fff;
+}
+
+/*Description
+---------------------------------------*/
+#description {
+	margin: 12px 0 0 20px;
+	color: #aaa;
+	font-size: 1.3em;
+	line-height: 1;
+}
+
+/*---------------------------------------------------------
+	5. Navigation
+------------------------------------------------------------ */
+.nav {
+	float: right;
+	margin: 20px;
+	border-top: 1px dashed #222;
+	border-bottom: 1px dashed #222;
+}
+.nav a {
+	display: block;
+	color: #dddedf;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 11px 20px;
+}
+.nav a:hover {
+	color: #fff;
+}
+.nav li {
+	float: left;
+	margin: 0 0 0 10px;
+}
+.nav ul {
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 200px;
+	font-weight: normal;
+	z-index: 99999;
+}
+.nav ul a, .nav li a {
+	display: block;
+	position: relative;
+}
+.nav ul a {
+	font-weight: normal;
+	color: #ebecee;
+	text-shadow: none;
+}
+.nav li li {
+	width: 200px;
+	background: #252525;
+}
+.nav li li a {
+	margin: 0;
+	padding: 8px 10px 8px 20px;
+	width: 170px;
+	line-height: 20px;
+}
+.nav li ul ul {
+	margin: -36px 0 0 190px;
+}
+.nav li:hover ul ul,
+.nav li:hover ul ul ul,
+.nav li:hover ul ul ul ul,
+.nav li.sfhover ul ul,
+.nav li.sfhover ul ul ul,
+.nav li.sfhover ul ul ul ul {
+	left: -999em;
+}
+.nav li:hover ul,
+.nav li li:hover ul,
+.nav li li li:hover ul,
+.nav li li li li:hover ul,
+.nav li.sfhover ul,
+.nav li li.sfhover ul,
+.nav li li li.sfhover ul,
+.nav li li li li.sfhover ul {
+	left: auto;
+}
+.nav li:hover,
+.nav li.sfhover,
+.nav .current_page_parent,
+.nav .current_page_ancestor,
+.nav .current-cat-parent,
+.nav .current-cat,
+.nav .current_page_item,
+.nav .current_page_item a,
+.nav .current-cat a {
+	color: #fff;
+}
+.nav li li:hover,
+.nav li li.sfhover,
+.nav li li.current_page_parent,
+.nav li li.current_page_ancestor,
+.nav li li.current-cat-parent,
+.nav li li.current-cat,
+.nav li li.current_page_item {
+	background: #121212;
+}
+
+/*Nav arrows
+---------------------------------------*/
+.nav a.sf-with-ul {
+	padding-right: 30px;
+	min-width: 1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position: absolute;
+	display: block;
+	right: 10px;
+	bottom: 16px; /* IE6 only */
+	width: 10px;
+	height: 10px;
+	text-indent: -999em;
+	overflow: hidden;
+	background: url(../images/nav-arrows.png) no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator { /* give all except IE6 the correct values */
+	bottom: 16px;
+	background-position: 0 -100px;
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px;
+}
+/* point right for anchors in subs */
+.nav ul .sf-sub-indicator {
+	background-position: -10px 0;
+	right: 32px;
+	top: 12px;
+}
+.nav ul a > .sf-sub-indicator {
+	background-position: 0 0;
+}
+/* apply hovers to modern browsers */
+.nav ul a:focus > .sf-sub-indicator,
+.nav ul a:hover > .sf-sub-indicator,
+.nav ul a:active > .sf-sub-indicator,
+.nav ul li:hover > a > .sf-sub-indicator,
+.nav ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0;
+}
+
+/*---------------------------------------------------------
+	6. Homepage
+------------------------------------------------------------ */
+div#home-photo {
+	position: relative;
+	margin: 0 0 47px 0;
+}
+div#home-photo img {
+	display: none;
+	padding: 6px 0 0 9px;
+	width: 948px;
+	height: 534px;
+}
+div#home-photo img:first-child { display: block; }
+.fr-home {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 25;
+	width: 966px;
+	height: 552px;
+	background: url(../images/frame-home.png) no-repeat top left;
+}
+
+/*---------------------------------------------------------
+	7. Gallery
+------------------------------------------------------------ */
+#gallery ul {
+	margin-left: 20px;
+}
+#gallery ul li {
+	float: left;
+	margin: 0 40px 40px 0;
+}
+#gallery ul li.g-first {
+	clear: both;
+}
+#gallery ul li.g-last {
+	margin: 0 0 40px 0;
+}
+#gallery ul li a {
+	display: block;
+	line-height: 0;
+	background: #000;
+}
+#gallery ul li a img {
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease-in;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 0.2s;
+	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+	-o-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+#gallery ul li a:hover img {
+	opacity: .5;
+}
+/* Gallery captions */
+li.basic.g-thumb h5 {
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-size: 1.3em;
+    max-width: 280px;
+}
+#gallery ul li.fancy {
+   height: 195px;
+}
+li.fancy.g-thumb h5 {
+    display: none;
+    width: 270px;
+    padding: 0 5px;
+    line-height: 20px !important;
+}
+li.fancy.g-thumb:hover h5 {
+    display: block;
+    margin-top: -38%;
+    font-size: 2em;
+    line-height: 0;
+    text-align: center;
+    color: #fff;
+}
+#gallery ul li.fancy a:hover img {
+    opacity: .25;
+}
+/*---------------------------------------------------------
+	8. Index layout
+------------------------------------------------------------ */
+.post {
+	margin: 0 0 40px 0;
+}
+
+/*Post Header
+---------------------------------------*/
+.entry h2.title {
+	font-size: 1.6em;
+	margin: 0;
+	padding: 0 0 15px 0;
+}
+.entry h2 a:link,
+.entry h2 a:visited {
+	color: #a2a2a2;
+	text-decoration: none;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+.entry h2 a:hover { color: #cbcbcb; }
+h4.arch-title {
+	margin: 0 0 30px 20px;
+	font-size: 1.8em;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/*Entry
+---------------------------------------*/
+.entry {
+	font-size: 1.3em;
+}
+.entry.index {
+	margin: 0 0 0 20px;
+}
+.entry.single {
+	margin: 0 0 20px 20px;
+}
+.entry img,
+img.index-feature,
+img.page-image {
+	margin: 15px 0 15px -20px;
+	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+	-o-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+img.index-feature,
+img.page-image {
+	margin: 0 0 15px 0;
+}
+.entry .comments {
+	float: left;
+	margin: 15px 0 0 0;
+}
+.entry .comments a {
+	color: #888;
+	text-decoration: none;
+	padding: 0 0 0 24px;
+	background: url(../images/icon-com.png) no-repeat 0 1px;
+}
+.entry .comments a:hover {
+	color: #dadada;
+	background: url(../images/icon-com.png) no-repeat 0 -18px;
+}
+.entry .date {
+	float: right;
+	color: #888;
+	margin: 15px 0 0 0;
+	padding: 0 0 0 22px;
+	background: url(../images/icon-cal.png) no-repeat 0 .2em;
+}
+
+/*---------------------------------------------------------
+	9. Single layout
+------------------------------------------------------------ */
+div.post-header {
+	margin-top: 15px;
+}
+h1.title {
+	margin: 0;
+	padding: 0 0 20px 0;
+	font-size: 1.8em;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+.entry.single h1.title {
+	float: left;
+}
+.entry.single .comments {
+	float: right;
+	margin: 0 0 15px 0;
+}
+.post .author {
+	text-align: center;
+	margin: 15px 0 0 20px;
+	padding: 10px 0;
+	font-size: 1.3em;
+	border-top: 1px dashed #222;
+	border-bottom: 1px dashed #222;
+}
+.tags,
+.cats {
+	float: right;
+	padding-bottom: 10px;
+	font-size: 1.2em;
+}
+.tags {
+	float: left;
+	width: 300px;
+	padding: 0 0 0 21px;
+}
+
+/*Gallery single
+---------------------------------------*/
+#gallery-single {
+	width: 980px;
+	line-height: 0;
+	margin: 0 0 40px -10px;
+}
+.gallery.g-single {
+	margin: 0 20px 40px 20px;
+}
+.static-image-container {
+	margin: 0 0 0 30px;
+	width: 920px;
+	text-align: center;
+}
+.static-image-container img {
+	margin: 0 0 20px 20px;
+}
+
+/*---------------------------------------------------------
+	10. Pages
+------------------------------------------------------------ */
+.entry.page {
+	margin: 0 0 0 20px;
+	width: 548px;
+}
+#content.full-width .entry.page {
+	width: 860px;
+}
+.gallery-pagination {
+	margin-top: 15px;
+}
+
+/*---------------------------------------------------------
+	11. In post/page styling
+------------------------------------------------------------ */
+.entry p {
+	margin-bottom: 10px;
+}
+.entry h2,
+.entry h3,
+.entry h4 {
+	font-size: 1.4em;
+	padding: 15px 0 5px 0;
+}
+.entry h3 {
+	padding-top: 10px;
+	font-size: 1.2em;
+}
+.entry h4,
+.entry h5,
+.entry h6 {
+	padding-top: 10px;
+	font-size: .9em;
+}
+pre {
+	margin: 10px 0;
+	padding: 1em 10px;
+	overflow: auto;
+	background-color: #ebebeb;
+	color: #000;
+}
+code {
+	padding: 2px 3px;
+	font: 1.1em Consolas, Courier New, sans-serif;
+	background-color: #ebebeb;
+	color: #000;
+}
+pre code {
+	font-size: 1.3em;
+}
+blockquote {
+	display: block;
+	margin: 20px 0 20px 20px;
+	padding: 0 0 0 20px;
+	border-left: 3px solid #444;
+	line-height: 1.5em;
+}
+small {
+	font-size: .75em;
+}
+.entry ul,
+.c-body ul {
+	margin: 0 0 10px 10px;
+}
+.entry ul li,
+.c-body ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+	margin: 5px 0 5px 20px;
+}
+.entry ol,
+.c-body ol {
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin: 5px 0 5px 40px;
+}
+.entry ol li ol li,
+.c-body ol li ol li {
+	list-style-type: lower-roman;
+}
+.entry ol li,
+.c-body ol li {
+	margin: 5px 0;
+}
+.navigation {
+	padding: 10px 0;
+	font-size: 1.3em;
+}
+
+/*---------------------------------------------------------
+	12. Comments
+------------------------------------------------------------ */
+#comments,
+#respond {
+	margin: 0 0 0 20px;
+}
+
+/*Top
+---------------------------------------*/
+.comment-number {
+	padding: 30px 0 10px 0;
+}
+.comment-number span {
+	float: left;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+a#leavecomment {
+	float: left;
+	margin: 0 0 0 15px;
+	font-size: 1.2em;
+}
+
+/*Body
+---------------------------------------*/
+div.comment-box {
+	margin: 20px 0 0 0;
+}
+div.c-grav {
+	float: left;
+	width: 42px;
+	margin-top: 10px;
+}
+div.c-grav img {
+	padding: 3px;
+	background: #3b3b3b;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+div.c-author {
+	margin: 5px 0 15px 0;
+	font-size: 1.1em;
+}
+div.c-date {
+	float: right;
+	color: #444;
+}
+div.c-body {
+	margin-left: 90px;
+	width: 458px;
+	font-size: 1.3em;
+}
+div.c-body p {
+	margin-top: 10px;
+}
+
+/*Threaded Comments
+---------------------------------------*/
+#comments ul.children {
+	margin: 10px 0 0 121px;
+	clear: both;
+}
+#comments ul.children li.comment {
+	margin-bottom: 20px;
+}
+#comments ul.children li.comment div.c-grav {
+	width: 74px;
+}
+#comments ul.children div.c-body {
+	margin-left: 87px;
+	width: 343px;
+}
+#comments ul.children ul.children {
+	margin-right: 20px;
+}
+#comments ul.children ul.children div.c-body {
+	width: 216px;
+}
+a.comment-reply-link {
+	float: right;
+	clear: both;
+	margin-top: 10px;
+	line-height: 1em;
+	font-size: .9em;
+}
+a#cancel-comment-reply-link {
+	float: right;
+	font-size: .8em;
+}
+
+/*Form
+---------------------------------------*/
+#respond {
+	margin: 30px 0 0 20px;
+}
+h3#reply-title,
+form#commentform {
+	font-size: 1.3em;
+}
+h3#reply-title {
+	margin: 0 0 30px 121px;
+	font-size: 1.6em;
+}
+p.com-logged-in {
+	margin: 0 0 0 121px;
+}
+form#commentform label.comment-field {
+	display: block;
+	float: left;
+	width: 121px;
+	margin: 5px 0 3px 0;
+}
+form#commentform fieldset span {
+	margin-left: 10px;
+	padding: 5px 10px;
+	background: rgba(0, 0, 0, 0.1);
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+input.text-input,
+form#commentform textarea {
+	padding: 5px;
+	width: 411px;
+	font-size: 1em;
+	border: 1px solid #333;
+	background: #444;
+	color: #a7a7a7;
+}
+form#commentform textarea {
+	font-family: inherit;
+}
+input#author,
+input#email,
+input#url {
+	width: 286px;
+}
+form#commentform p.guidelines {
+	margin: 10px 0 5px 121px;
+}
+p.subscribe-to-comments,
+p.comments-rss {
+	margin: 0 0 10px 0;
+}
+p.comments-rss a:link,
+p.comments-rss a:visited  {
+	margin-top: 5px;
+	display: block;
+	padding: 0 0 0 24px;
+	background: url(../images/comments-rss.png) no-repeat 0 .25em;
+}
+fieldset {
+	border: none;
+	display: block;
+	margin: 15px 0;
+}
+#commentform .comments-rss,
+.comments-submit,
+.form-submit {
+	margin-left: 121px;
+}
+
+/*Note
+---------------------------------------*/
+p.note {
+	font-style: italic;
+	font-size: 1.3em;
+}
+
+/*Pingbacks/Trackbacks
+---------------------------------------*/
+h3.pinghead {
+	margin: 30px 0 15px 0;
+	font-size: 1.4em;
+}
+ol.pinglist {
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin: 0 0 15px 0;
+	font-size: 1.3em;
+}
+
+/*---------------------------------------------------------
+	13. Sidebar
+------------------------------------------------------------ */
+/*Subscribe
+---------------------------------------*/
+.subscribe {
+	margin-bottom: 40px;
+}
+.subscribe h5 {
+	float: left;
+	padding: 4px 15px;
+	margin: 0 15px 0 0;
+	font-weight: bold;
+	font-size: 1.3em;
+	background: #282828;
+	background: rgba(0, 0, 0, 0.10);
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+.subscribe ul {
+	float: right;
+	margin-top: 5px;
+}
+.subscribe ul li {
+	float: left;
+	margin-left: 10px;
+}
+.subscribe li a:link,
+.subscribe li a:visited {
+	opacity: .5;
+}
+.subscribe li a:hover {
+	opacity: 1;
+}
+.subscribe li a:active {
+	opacity: .5;
+}
+#sidebar a:link,
+#sidebar a:visited {
+	text-decoration: none;
+}
+
+/*Widgets
+---------------------------------------*/
+.widget {
+	margin: 0 0 40px 0;
+}
+.textwidget {
+	font-size: 13px;
+	line-height: 1.69em;
+}
+h2.widgettitle {
+	margin: 0 0 10px 0;
+	font-size: 1.4em;
+}
+ul li.widget ul {
+	font-size: 1.2em;
+}
+ul li.widget ul li ul {
+	margin-left: 5px;
+	font-size: 1em;
+}
+ul li.widget ul li {
+	padding: 1px 0;
+}
+ul li.widget ul li ul li {
+	padding: 1px 0 0 0;
+}
+.textwidget p {
+	margin: 0 0 10px 0;
+	font-size: 1.3em;
+}
+table#wp-calendar {
+	width: 100%;
+	font-size: 1.3em;
+}
+table#wp-calendar caption {
+	margin-bottom: 10px;
+}
+
+/*Search
+---------------------------------------*/
+#search-form input.search {
+	margin: 15px 0 0 0;
+	padding: 6px;
+	width: 160px;
+	border: 1px solid #333;
+	background: #444;
+	color: #222;
+}
+#search-form label {
+	position: absolute;
+	left: -9999em;
+}
+#search-form input.search:focus {
+	background: #666;
+}
+#search-form input#searchsubmit {
+	margin: 0 0 0 10px;
+	padding: 5px 10px;
+	color: #a2a2a2;
+	font-family: inherit;
+	font-size: 1.2em;
+	font-weight: bold;
+	cursor: pointer;
+	background: #232323;
+	border: 1px solid #141414;
+}
+.entry #search-form input#searchsubmit {
+	font-size: 1em;
+}
+#search-form input#searchsubmit:hover {
+	background: #121212;
+}
+
+/*---------------------------------------------------------
+	14. Footer
+------------------------------------------------------------ */
+/*Copyright
+---------------------------------------*/
+#copyright {
+	display: block;
+	text-align: center;
+	clear: both;
+	margin: 0 0 40px 0;
+	font-size: 1.1em;
+	color: #ccc;
+}
+p.credit {
+	float: right;
+}
+#copyright a:link,
+#copyright a:visited {
+	color: #ddd;
+	font-weight: bold;
+	text-decoration: none;
+}
+#copyright a:hover {
+	border-bottom: 1px solid;
+	text-decoration: none;
+}
+
+/*---------------------------------------------------------
+	15. Images and globals
+------------------------------------------------------------ */
+embed,
+object,
+video,
+iframe {
+	max-width: 100%;
+}
+.entry img {
+	margin-left: 5px;
+	max-width: 540px;
+}
+.entry.single img {
+	margin-left: 0;
+	max-width: 608px;
+}
+#content.full-width .entry img {
+	max-width: 860px;
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="wp-post-image"] {
+ height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full {
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+div.file-not-found,
+div.g-single.g-protect {
+	width: 460px;
+	margin: 0 auto 40px auto;
+}
+.entry .no-style img,
+.entry a .no-style img {
+	margin: 15px 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+.entry img.alignright {
+	margin: 0 0 15px 30px;
+}
+.entry img.alignleft {
+	margin: 0 30px 15px 0;
+}
+.entry img.aligncenter {
+	margin: 15px auto;
+}
+.wp-caption {
+	max-width: 100%;
+}
+.gallery-caption,
+.wp-caption-text,
+.wp-caption p {
+	font-style: italic;
+}
+.wp-caption.alignleft {
+	margin: 0 20px 15px 0;
+}
+.wp-caption.alignright {
+	margin: 0 0 15px 20px;
+}
+.wp-caption img {
+	margin: 0 0 15px;
+	padding: 0;
+}
+
+/*Table
+---------------------------------------*/
+
+table {
+	margin: 15px 0;
+	width: 100%;
+}
+th {
+	text-align: left;
+}
+thead th {
+	padding: 4px 8px;
+}
+th,td,caption {
+	padding: 4px 10px 4px 5px;
+}
+tbody tr:nth-child(even) td,
+tbody tr.even td {
+}
+tfoot {
+	font-style: italic;
+}
+caption {
+	padding: 4px 8px;
+}
+td[valign="top"] {
+	vertical-align: top;
+}
+td[valign="bottom"] {
+	vertical-align: bottom;
+}
+
+/*Definition list
+---------------------------------------*/
+
+dl {
+	margin: 15px 0;
+}
+dl dt {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+dd {
+	margin-left: 1.5em;
+	margin-bottom: 5px;
+}
+
+/*Semi-transparent box
+---------------------------------------*/
+.gallery.g-single,
+.entry.index,
+.entry.page,
+div.comment-box,
+div.file-not-found {
+	padding: 30px 30px 20px 30px;
+	background: #282828;
+	background: rgba(0, 0, 0, 0.15);
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+li.comment-author-admin div.comment-box,
+li.bypostauthor div.comment-box {
+	background: #191919;
+	background: rgba(0, 0, 0, 0.40);
+}
+div.file-not-found {
+	padding: 30px;
+}
+div.comment-box {
+	padding: 20px 30px;
+}
+
+/*Text shadow
+---------------------------------------*/
+.entry,
+#sidebar {
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}

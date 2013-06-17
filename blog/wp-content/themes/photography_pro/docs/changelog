@@ -1,0 +1,64 @@
+== Changelog ==
+= 1.5.4 =
+* Stylistic fixes
+* Fixed basic captions when gallery titles are longer than one line
+* Updated Galleria JavaScript to non-alpha version
+
+= 1.5.3 =
+* Fixed Gallery page template to never show passworded or private galleries
+
+= 1.5.2 =
+* Fixed center-aligned images in full-width template
+
+= 1.5.1 =
+* Removed stats code option
+
+= 1.5 =
+* Added small tag styling
+* Added edit links to pages for admins
+* Removed title from links on Gallery pages
+* Added an image size for galleries to decrease load times
+
+= 1.4.2 =
+* Fixed bug with social icon display
+
+= 1.4.1 =
+* Fixed styling for long titles on fancy captions
+* Added Google+ icon
+* Fixed bug preventing image box shadows from being removed
+
+= 1.4 =
+* Added ability to create multiple Gallery pages using the [gallery] shortcode
+* Added option to control captions on Gallery pages
+* Fixed image caption styles
+* Added keyboard navigation to single galleries
+* Fixed image stretching in old versions of Internet Explorer
+* Added dl and table styles
+
+= 1.3.3 =
+* Fixed some bugs in the attachment template
+
+= 1.3.2 =
+* Removed some duplicate code regarding post types
+* Moved Flickr initialization into constructor, for easier child theme overriding
+* Added attachment template for posts
+* Fixed light color scheme search box display
+* Fixed header spacing for a wide logo image
+
+= 1.3.1 =
+* Fixed images being squished on the full-width page template
+
+= 1.3 =
+* Fixed maximum widths for images & other media
+* Changed admin styles to match WordPress defaults
+* Accessibility improvements on search form
+* Fixed post title tags to allow HTML
+* Fixed thumbnail size for gallery pages
+* Updated Galleria script to 1.2.5a3
+* Fixed IE9 thumbnail issues
+
+= 1.2 =
+* Replaced the old logo uploader with a faster version that uses WP core.
+* Update Galleria to the latest code. Fixes problems with Opera 11 and IE9.
+* Fixed underline styling on post title when using the light color scheme.
+* Add the category taxonomy to the gallery post type. This allows users to create custom gallery pages using categories.

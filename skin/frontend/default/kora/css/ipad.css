@@ -1,0 +1,30 @@
+/* iPad [portrait + landscape] */
+
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {*/
+
+  .product-detail-box {
+    width: 485px ! important;
+    float: left;
+    margin-left: 10px ! important;
+    margin-top: 5px;
+  }
+
+  .ui-tabs .ui-tabs-nav li a {
+    font-size: 0.7em ! important;
+  }
+
+  .ui-tabs .ui-tabs-nav li {
+    padding-left: 4px ! important;
+    padding-right: 4px ! important;
+  }
+
+  div.main_content div#content {
+    /*width: 45% ! important;*/
+    width: 790px ! important;
+  }
+
+  .block-account .block-title strong {
+    font-size: 10px ! important;
+  }  
+
+/*}*/

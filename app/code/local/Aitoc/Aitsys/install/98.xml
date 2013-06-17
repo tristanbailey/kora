@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<install><product id="98" key="Aitoc_Aitpreorder" version="1.1.23" license_id="11668" link_id="332852"><![CDATA[Pre-Orders]]></product><serial>MpavTKfgbcrRPJ88sBMFRhGGqYnzRuVQc7WznQkxPL</serial><checkid>f7b2eddd7591bec9b0b43342d2b30d05</checkid><store_url><![CDATA[http://www.aitoc.com/en/]]></store_url><service><![CDATA[https://www.aitoc.com/api/xmlrpc/]]></service><constraint><store label="Number of stores">1</store></constraint></install>

@@ -1,0 +1,23 @@
+<?php 
+//Change 1 to 0 if you wish to output selector always
+?>
+<!--
+<?php #if($this->getCurrencyCount() > 0): ?>
+<span>Select Currency:</span>
+<select name="custom-currency-selector" id="custom-currency-selector">
+<?php #foreach ($this->getCurrencies() as $_code => $_name): ?>
+    <option value="<?php echo $this->getSwitchCurrencyUrl($_code)?>"
+        <?php# if($_code == $this->getCurrentCurrencyCode()): ?>
+            selected="SELECTED"
+        <?php #endif; ?>>
+        <?php #echo $_code ?>
+    </option>
+<?php #endforeach; ?>
+</select>
+<?php #endif; ?>
+<script type="text/javascript">
+   // $('custom-currency-selector').observe('change',function(evt){
+   //     window.location = $('custom-currency-selector').value;
+   // });
+</script>
+-->

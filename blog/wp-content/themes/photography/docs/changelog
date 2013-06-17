@@ -1,0 +1,7 @@
+== Changelog ==
+
+= 1.2 =
+* Replaced the old logo uploader with a faster version that uses WP core.
+* Update Galleria to the latest code. Fixes problems with Opera 11 and IE9.
+* Fixed underline styling on post title when using the light color scheme.
+* Add the category taxonomy to the gallery post type. This allows users to create custom gallery pages using categories.

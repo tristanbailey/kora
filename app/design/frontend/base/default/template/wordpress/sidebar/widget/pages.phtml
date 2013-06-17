@@ -1,0 +1,60 @@
+<?php
+/**
+ *
+ *
+ *
+ */
+?>
+
+<?php 
+$pages = $this->getPages();
+$index = 0;
+?>
+
+JAMESJAMESJAMESJAMESJAMES
+
+<?php if (count($pages) > 0): ?>
+	<?php if ($title = $this->getTitle()): ?>
+		<strong><?php #echo $title ?></strong>
+	<?php endif; ?>
+
+	<ul>
+		<?php foreach($pages as $page): ?>
+			<?php
+			$index++;
+			if ($index <= 3): ?>
+
+			<?php
+			$active = false;
+			// get final part of url
+			$url = $this->helper('core/url')->getCurrentUrl();
+			$path = substr($url, strrpos($url, "/")+1);
+
+			// convert page title into same format as url (e.g. "the-fabric")
+			$converted_title = str_replace(" ", "-", strtolower($page->getMenuLabel()));
+			$converted_title = str_replace("?", "", $converted_title);
+			
+			//echo $path;			
+			echo $url;
+			echo $converted_title;
+			echo strpos($url, $converted_title);
+
+			if (strpos($url, $converted_title) !== false) {
+			//if ($path === $converted_title) {
+				$active = true;
+			}
+			?>
+
+			<li <?php echo $active==true?'class="active"':"" ?>>
+				<div class="outerContainer">
+  				<div class="innerContainer">
+  					<div class="element">
+							<a href="<?php echo $page->getUrl() ?>" title="<?php echo $page->getPostTitle() ?>"><?php echo $page->getMenuLabel() ?></a>
+						</div>
+  				</div>
+  			</div>				
+			</li>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</ul>
+<?php endif; ?>

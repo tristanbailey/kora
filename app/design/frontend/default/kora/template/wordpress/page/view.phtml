@@ -1,0 +1,96 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+
+// using simple_dom_parser (see http://simplehtmldom.sourceforge.net/)
+include_once('simple_html_dom.php');
+
+$currentUrl = $this->helper('core/url')->getCurrentUrl();
+$has_gallery = false;
+
+?>
+
+<?php $page = $this->getPage() ?>
+
+<?php if ($page): ?>
+	<?php $helper = $this->helper('wordpress') ?>
+	<?php $author = $page->getAuthor() ?>
+
+	<?php
+
+	// remove page-links UL element from content to display where we choose
+	$content = $page->getPostContent();
+	$links = "";
+	$gallery = "";
+	$pattern = '#\<ul id="page-links"\>(.+?)\<\/ul\>#s';
+	preg_match($pattern, $content, $matches);
+	if (count($matches) > 0) {
+		$links = $matches[0];
+		$content = preg_replace($pattern, "", $content);
+
+		// add "active" class to current page link
+		$processed_links = str_get_html($links);
+		$processed_links->find('a[href='.$currentUrl.']',0)->class = 'active';
+	}
+
+	$pattern = '#\<div class="gallery(.+?)"\>(.+?)\<\/div\>#s';
+	preg_match($pattern, $content, $matches);
+	if (count($matches) > 0) {
+		$has_gallery = true;
+		$gallery = $matches[0];
+		$content = preg_replace($pattern, "", $content);
+
+		// remove cropped image from gallery
+		// using simple_dom_parser (see http://simplehtmldom.sourceforge.net/)
+		$html = str_get_html($gallery);
+		if ($html->find('dl.gallery-item a[href*=cropped]',0)) {
+			$image_title = $html->find('dl.gallery-item a[href*=cropped]',0)->title;
+			$html->find('dl.gallery-item a[href*=cropped]',0)->parent()->parent()->outertext = '';
+		}		
+	}
+	else {
+		// no gallery found, widen the content box
+		$has_gallery = false;
+	}
+
+
+	?>
+
+	<div class="page-title">
+		<h1><?php echo $page->getPostTitle() ?></h1>
+		<?php echo $processed_links ?>
+	</div>
+	<div class="post-view">
+		<div class="entry std">
+			<?php if ($page->isViewableForVisitor()): ?>
+				<div id="content" class="scroll-pane <?php echo $has_gallery ? '' : 'wide' ?>">
+					<?php echo $content ?>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				</div>
+				<div id="gallery" <?php echo $has_gallery ? '' : 'style="display:none;"' ?>>
+				<?php if ($featuredImage = $page->getFeaturedImage()): ?>
+					<div class="featured-image">
+						<?php
+						$src = $featuredImage->getAvailableImage();
+						$original_src = substr($src, 0, strpos($src, "-cropped-150x150")) . ".jpg";
+						$src = substr($src, 0, strpos($src, "-150x150")) . ".jpg";
+						?>
+						<a href="<?php echo $original_src ?>" class="pirobox_gall" rel="gallery" title="<?php echo $image_title ?>">
+							<img src="<?php echo $src ?>" alt=""/>
+						</a>
+					</div>
+				<?php endif; ?>
+				<?php echo $html ?>
+				</div>
+				<br style="clear:both;"/>
+			<?php else: ?>
+				<?php echo $this->getPasswordProtectHtml() ?>
+			<?php endif; ?>
+		</div>
+		<?php echo $this->getCommentsHtml() ?>
+	</div>
+<?php endif; ?>

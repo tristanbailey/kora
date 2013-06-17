@@ -1,0 +1,755 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Photography WordPress Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-24 17:49-0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: The Theme Foundry <info@thethemefoundry.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;esc_attr_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:3
+msgid "404: Page Not Found"
+msgstr ""
+
+#: 404.php:5
+msgid "The URL you typed no longer exists. It might have been moved or deleted, or perhaps you mistyped it. We suggest searching the site:"
+msgstr ""
+
+#: archive.php:6
+#, php-format
+msgid "Posts from the &#8216;%s&#8217; Category"
+msgstr ""
+
+#: archive.php:8
+#, php-format
+msgid "Posts tagged &#8216;%s&#8217;"
+msgstr ""
+
+#: archive.php:10
+#: archive.php:12
+#: archive.php:14
+#, php-format
+msgid "Archive for %s"
+msgstr ""
+
+#: archive.php:16
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: archive.php:18
+msgid "Blog Archives"
+msgstr ""
+
+#: archive.php:24
+#: index.php:10
+#, php-format
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: archive.php:25
+#: index.php:11
+#: search.php:9
+msgid "Read more..."
+msgstr ""
+
+#: archive.php:26
+#: index.php:12
+#: single-gallery.php:34
+msgid "Edit this"
+msgstr ""
+
+#: archive.php:27
+#: comments.php:100
+#: index.php:14
+#: search.php:10
+msgid "Leave a comment"
+msgstr ""
+
+#: archive.php:27
+#: comments.php:10
+#: index.php:14
+#: search.php:10
+msgid "1 Comment"
+msgstr ""
+
+#: archive.php:28
+#: index.php:16
+#: search.php:11
+msgid "j M Y"
+msgstr ""
+
+#: archive.php:33
+#: index.php:21
+#: search.php:17
+msgid "&laquo; Older Entries"
+msgstr ""
+
+#: archive.php:34
+#: index.php:22
+#: search.php:18
+msgid "Newer Entries &raquo;"
+msgstr ""
+
+#: attachment.php:26
+msgid "&larr; Previous image"
+msgstr ""
+
+#: attachment.php:27
+msgid "Next image &rarr;"
+msgstr ""
+
+#: attachment.php:30
+msgid "Return to gallery"
+msgstr ""
+
+#: comments.php:3
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:10
+msgid "No Comments Yet"
+msgstr ""
+
+#: comments.php:10
+#: index.php:14
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:12
+msgid "Post a comment"
+msgstr ""
+
+#: comments.php:25
+msgid "&laquo; Older Comments"
+msgstr ""
+
+#: comments.php:26
+msgid "Newer Comments &raquo;"
+msgstr ""
+
+#: comments.php:29
+msgid "Trackbacks &amp; Pingbacks"
+msgstr ""
+
+#: comments.php:35
+msgid "&laquo; Older Pingbacks"
+msgstr ""
+
+#: comments.php:36
+msgid "Newer Pingbacks &raquo;"
+msgstr ""
+
+#: comments.php:40
+#: comments.php:45
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:56
+msgid "Comment"
+msgstr ""
+
+#: comments.php:61
+msgid "Comments Feed"
+msgstr ""
+
+#: comments.php:62
+msgid "<strong>Note:</strong> HTML is allowed. Your email address will <strong>never</strong> be published."
+msgstr ""
+
+#: comments.php:68
+msgid "Name"
+msgstr ""
+
+#: comments.php:73
+#: comments.php:85
+msgid "required"
+msgstr ""
+
+#: comments.php:80
+msgid "Email"
+msgstr ""
+
+#: comments.php:92
+msgid "Website"
+msgstr ""
+
+#: comments.php:98
+msgid "Submit Comment"
+msgstr ""
+
+#: comments.php:99
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out &raquo;</a>"
+msgstr ""
+
+#: comments.php:101
+#, php-format
+msgid "Leave a comment to %s"
+msgstr ""
+
+#: footer.php:5
+#, php-format
+msgid "Copyright &copy; %1$s %2$s. All rights reserved."
+msgstr ""
+
+#: footer.php:13
+#, php-format
+msgid "<a href=\"%1$s\">WordPress Photography Theme</a> by <a href=\"%2$s\">The Theme Foundry</a>"
+msgstr ""
+
+#: full-width.php:14
+#: gallery.php:70
+#: homepage.php:20
+#: page.php:8
+msgid "Edit this page"
+msgstr ""
+
+#: header.php:8
+msgid "Page Not Found |"
+msgstr ""
+
+#: header.php:10
+#: search.php:3
+#, php-format
+msgid "Search results for '%s'"
+msgstr ""
+
+#: header.php:19
+#, php-format
+msgid "Design is copyright %1$s The Theme Foundry"
+msgstr ""
+
+#: header.php:32
+msgid "Skip to content"
+msgstr ""
+
+#: search.php:12
+msgid "Edit"
+msgstr ""
+
+#: search.php:22
+#, php-format
+msgid "Sorry your search for \"%s\" did not turn up any results. Please try again."
+msgstr ""
+
+#: searchform.php:3
+#: searchform.php:5
+msgid "Search"
+msgstr ""
+
+#: sidebar.php:9
+msgid "Recent Articles"
+msgstr ""
+
+#: sidebar.php:18
+msgid "Archives"
+msgstr ""
+
+#: single.php:19
+msgid "Categories:"
+msgstr ""
+
+#: single.php:20
+msgid "Tags: "
+msgstr ""
+
+#: single.php:22
+#, php-format
+msgid "Posted by %1$s on %2$s"
+msgstr ""
+
+#: subscribe.php:6
+#: subscribe.php:13
+#: functions/photography-extend.php:100
+#: functions/photography-extend.php:654
+msgid "Flickr"
+msgstr ""
+
+#: subscribe.php:18
+#: subscribe.php:24
+msgid "Google+"
+msgstr ""
+
+#: subscribe.php:29
+#: subscribe.php:36
+msgid "Facebook"
+msgstr ""
+
+#: subscribe.php:41
+#: subscribe.php:48
+msgid "Twitter"
+msgstr ""
+
+#: subscribe.php:52
+msgid "RSS"
+msgstr ""
+
+#: subscribe.php:59
+msgid "RSS Feed"
+msgstr ""
+
+#: functions/comments.php:24
+#: functions/comments.php:48
+msgid "<em><strong>Please Note:</strong> Your comment is awaiting moderation.</em>"
+msgstr ""
+
+#: functions/comments.php:29
+#: functions/comments.php:53
+msgid "Trackback"
+msgstr ""
+
+#: functions/comments.php:29
+#: functions/comments.php:53
+msgid "Pingback"
+msgstr ""
+
+#: functions/photography-extend.php:101
+msgid "Gallery Options"
+msgstr ""
+
+#: functions/photography-extend.php:113
+msgid "Galleries"
+msgstr ""
+
+#: functions/photography-extend.php:114
+msgid "Gallery"
+msgstr ""
+
+#: functions/photography-extend.php:115
+msgid "Add New"
+msgstr ""
+
+#: functions/photography-extend.php:116
+msgid "Add New Gallery"
+msgstr ""
+
+#: functions/photography-extend.php:117
+msgid "Edit Gallery"
+msgstr ""
+
+#: functions/photography-extend.php:118
+msgid "New Gallery"
+msgstr ""
+
+#: functions/photography-extend.php:119
+msgid "View Gallery"
+msgstr ""
+
+#: functions/photography-extend.php:120
+msgid "Search Galleries"
+msgstr ""
+
+#: functions/photography-extend.php:121
+msgid "No galleries found"
+msgstr ""
+
+#: functions/photography-extend.php:122
+msgid "No galleries found in Trash"
+msgstr ""
+
+#: functions/photography-extend.php:156
+msgid "(no title)"
+msgstr ""
+
+#: functions/photography-extend.php:161
+msgid "Y/m/d"
+msgstr ""
+
+#: functions/photography-extend.php:163
+msgid "Re-Attach"
+msgstr ""
+
+#: functions/photography-extend.php:168
+msgid "(Unattached)"
+msgstr ""
+
+#: functions/photography-extend.php:169
+msgid "Attach"
+msgstr ""
+
+#: functions/photography-extend.php:181
+msgid "Things to remember when adding or editing a gallery:"
+msgstr ""
+
+#: functions/photography-extend.php:183
+msgid "Specify the correct genre such as Mystery, or Historic."
+msgstr ""
+
+#: functions/photography-extend.php:184
+msgid "Specify the correct writer of the gallery.\t Remember that the Author module refers to you, the author of this gallery review."
+msgstr ""
+
+#: functions/photography-extend.php:186
+msgid "If you want to schedule the gallery review to be published in the future:"
+msgstr ""
+
+#: functions/photography-extend.php:188
+msgid "Under the Publish module, click on the Edit link next to Publish."
+msgstr ""
+
+#: functions/photography-extend.php:189
+msgid "Change the date to the date to actual publish this article, then click on Ok."
+msgstr ""
+
+#: functions/photography-extend.php:191
+msgid "For more information:"
+msgstr ""
+
+#: functions/photography-extend.php:192
+msgid "<a href=\"http://codex.wordpress.org/Posts_Edit_SubPanel\" target=\"_blank\">Edit Posts Documentation</a>"
+msgstr ""
+
+#: functions/photography-extend.php:193
+msgid "<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support Forums</a>"
+msgstr ""
+
+#: functions/photography-extend.php:196
+msgid "This is the help screen displaying the table of galleries."
+msgstr ""
+
+#: functions/photography-extend.php:230
+msgid "Disable the Gallery title and description (appears below the gallery)."
+msgstr ""
+
+#: functions/photography-extend.php:234
+msgid "Disable image descriptions (appears in the top left corner of each image)."
+msgstr ""
+
+#: functions/photography-extend.php:238
+msgid "Enable image hard cropping to the stage size."
+msgstr ""
+
+#: functions/photography-extend.php:242
+msgid "Enable auto play."
+msgstr ""
+
+#: functions/photography-extend.php:245
+msgid "Set a custom gallery stage height (default is 540px):"
+msgstr ""
+
+#: functions/photography-extend.php:265
+msgid "You currently have no publicly viewable Flickr sets."
+msgstr ""
+
+#: functions/photography-extend.php:271
+msgid "Enable Flickr:"
+msgstr ""
+
+#: functions/photography-extend.php:273
+msgid "Flickr image size:"
+msgstr ""
+
+#: functions/photography-extend.php:280
+msgid "Flickr set:"
+msgstr ""
+
+#: functions/photography-extend.php:292
+msgid "You must provide your Flickr user ID and API Key in Appearance &rarr; Photography Options &rarr; Flickr"
+msgstr ""
+
+#: functions/photography-extend.php:353
+msgid "Parent"
+msgstr ""
+
+#: functions/photography-extend.php:368
+#, php-format
+msgid "Gallery updated. <a href=\"%s\">View gallery</a>"
+msgstr ""
+
+#: functions/photography-extend.php:371
+msgid "Custom field updated."
+msgstr ""
+
+#: functions/photography-extend.php:372
+msgid "Custom field deleted."
+msgstr ""
+
+#: functions/photography-extend.php:373
+msgid "Gallery updated."
+msgstr ""
+
+#: functions/photography-extend.php:375
+#, php-format
+msgid "Gallery restored to revision from %s"
+msgstr ""
+
+#: functions/photography-extend.php:379
+#, php-format
+msgid "Gallery published. <a href=\"%s\">View gallery</a>"
+msgstr ""
+
+#: functions/photography-extend.php:382
+msgid "Gallery saved."
+msgstr ""
+
+#: functions/photography-extend.php:384
+#, php-format
+msgid "Gallery submitted. <a target=\"_blank\" href=\"%s\">Preview gallery</a>"
+msgstr ""
+
+#: functions/photography-extend.php:388
+#, php-format
+msgid "Gallery scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview gallery</a>"
+msgstr ""
+
+#: functions/photography-extend.php:389
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: functions/photography-extend.php:393
+#, php-format
+msgid "Gallery draft updated. <a target=\"_blank\" href=\"%s\">Preview gallery</a>"
+msgstr ""
+
+#: functions/photography-extend.php:516
+msgid "Sidebar"
+msgstr ""
+
+#: functions/photography-extend.php:587
+#: functions/photography-extend.php:588
+#: functions/ttf-admin.php:62
+#: functions/ttf-admin.php:121
+#: functions/ttf-admin.php:122
+#: functions/ttf-admin.php:144
+msgid "Theme Options"
+msgstr ""
+
+#: functions/photography-extend.php:599
+msgid "Top Navigation"
+msgstr ""
+
+#: functions/photography-extend.php:620
+msgid "Custom logo image"
+msgstr ""
+
+#: functions/photography-extend.php:624
+msgid "Enable custom logo image"
+msgstr ""
+
+#: functions/photography-extend.php:626
+msgid "Check to use a custom logo in the header."
+msgstr ""
+
+#: functions/photography-extend.php:631
+msgid "Logo URL"
+msgstr ""
+
+#: functions/photography-extend.php:633
+msgid "Upload an image or enter an URL for your image."
+msgstr ""
+
+#: functions/photography-extend.php:640
+msgid "Logo image <code>&lt;alt&gt;</code> tag"
+msgstr ""
+
+#: functions/photography-extend.php:642
+msgid "Specify the <code>&lt;alt&gt;</code> tag for your logo image."
+msgstr ""
+
+#: functions/photography-extend.php:647
+msgid "Display tagline"
+msgstr ""
+
+#: functions/photography-extend.php:649
+msgid "Check to show your tagline below your logo."
+msgstr ""
+
+#: functions/photography-extend.php:658
+msgid "Flickr username"
+msgstr ""
+
+#: functions/photography-extend.php:660
+msgid "Specify your Flickr username (found in your URL): http://flickr.com/photos/<strong>username</strong>"
+msgstr ""
+
+#: functions/photography-extend.php:665
+msgid "Flickr API key"
+msgstr ""
+
+#: functions/photography-extend.php:667
+msgid "Specify your Flickr API Key."
+msgstr ""
+
+#: functions/photography-extend.php:672
+msgid "Flickr API secret"
+msgstr ""
+
+#: functions/photography-extend.php:674
+msgid "Specify your Flickr API Secret."
+msgstr ""
+
+#: functions/photography-extend.php:679
+#: functions/photography-extend.php:683
+msgid "Color scheme"
+msgstr ""
+
+#: functions/photography-extend.php:684
+msgid "Choose your color scheme."
+msgstr ""
+
+#: functions/photography-extend.php:689
+msgid "Dark (default)"
+msgstr ""
+
+#: functions/photography-extend.php:690
+msgid "Light"
+msgstr ""
+
+#: functions/photography-extend.php:693
+msgid "Gallery display"
+msgstr ""
+
+#: functions/photography-extend.php:697
+msgid "Captions on Gallery pages"
+msgstr ""
+
+#: functions/photography-extend.php:699
+msgid "Select the style of captions you'd like on your Gallery page. <em>Basic</em> adds the caption below the gallery image. <em>Fancy</em> makes the captions appear when you hover on a gallery."
+msgstr ""
+
+#: functions/photography-extend.php:703
+msgid "Off (default)"
+msgstr ""
+
+#: functions/photography-extend.php:704
+msgid "Basic"
+msgstr ""
+
+#: functions/photography-extend.php:705
+msgid "Fancy"
+msgstr ""
+
+#: functions/photography-extend.php:708
+msgid "Subscribe links"
+msgstr ""
+
+#: functions/photography-extend.php:712
+msgid "Enable Twitter"
+msgstr ""
+
+#: functions/photography-extend.php:714
+msgid "Hip to Twitter? Check this box. Please set your Twitter username in the Twitter menu."
+msgstr ""
+
+#: functions/photography-extend.php:719
+msgid "Enable Facebook"
+msgstr ""
+
+#: functions/photography-extend.php:721
+msgid "Check this box to show a link to your Facebook page."
+msgstr ""
+
+#: functions/photography-extend.php:726
+msgid "Enable Flickr"
+msgstr ""
+
+#: functions/photography-extend.php:728
+msgid "Check this box to show a link to Flickr."
+msgstr ""
+
+#: functions/photography-extend.php:733
+msgid "Enable Google+"
+msgstr ""
+
+#: functions/photography-extend.php:735
+msgid "Check this box to show a link to Google+."
+msgstr ""
+
+#: functions/photography-extend.php:740
+msgid "Disable all"
+msgstr ""
+
+#: functions/photography-extend.php:742
+msgid "Check this box to hide all follow icons (including RSS). This option overrides any other settings."
+msgstr ""
+
+#: functions/photography-extend.php:747
+msgid "Twitter name"
+msgstr ""
+
+#: functions/photography-extend.php:749
+msgid "Enter your Twitter name."
+msgstr ""
+
+#: functions/photography-extend.php:754
+msgid "Facebook link"
+msgstr ""
+
+#: functions/photography-extend.php:756
+msgid "Enter your Facebook link."
+msgstr ""
+
+#: functions/photography-extend.php:761
+msgid "Flickr link"
+msgstr ""
+
+#: functions/photography-extend.php:763
+msgid "Enter your Flickr link."
+msgstr ""
+
+#: functions/photography-extend.php:768
+msgid "Google+ link"
+msgstr ""
+
+#: functions/photography-extend.php:770
+msgid "Enter your Google+ link."
+msgstr ""
+
+#: functions/photography-extend.php:775
+msgid "Footer"
+msgstr ""
+
+#: functions/photography-extend.php:779
+msgid "Copyright notice"
+msgstr ""
+
+#: functions/photography-extend.php:781
+msgid "Your name or the name of your business."
+msgstr ""
+
+#: functions/photography-extend.php:782
+msgid "Your Name Here"
+msgstr ""
+
+#: functions/ttf-admin.php:134
+#, php-format
+msgid "%s settings saved!"
+msgstr ""
+
+#: functions/ttf-admin.php:138
+#, php-format
+msgid "%s settings reset."
+msgstr ""
+
+#: functions/ttf-admin.php:155
+#: functions/ttf-admin.php:285
+msgid "Save changes"
+msgstr ""
+
+#: functions/ttf-admin.php:236
+msgid "show color picker"
+msgstr ""
+
+#: functions/ttf-admin.php:236
+msgid "hide color picker"
+msgstr ""
+
+#: functions/ttf-admin.php:290
+msgid "Save all changes"
+msgstr ""
+
+#: functions/ttf-admin.php:298
+msgid "Reset all options"
+msgstr ""
+

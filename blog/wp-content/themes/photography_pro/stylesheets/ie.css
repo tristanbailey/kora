@@ -1,0 +1,8 @@
+/* clear the floats for all our IE friends*/
+.clear, form#commentform { zoom: 1; }
+
+/* Opacity for gallery thumbs */
+#gallery ul li a:hover img {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+}

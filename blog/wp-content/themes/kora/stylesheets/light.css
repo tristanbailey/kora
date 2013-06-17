@@ -1,0 +1,258 @@
+/*Body & Links
+------------------------------------------------------------ */
+body.light {
+	background: #eaeaea url(../images/light-body-bg.png) repeat left top;
+	color: #555;
+}
+body.light a:link,
+body.light a:visited {
+	color: #555;
+	text-decoration: underline;
+}
+body.light a:hover {
+	color: #222;
+}
+/*Header
+------------------------------------------------------------ */
+body.light #title a {
+	color: #888;
+	text-shadow: none;
+}
+body.light #title a:hover {
+	color: #444;
+}
+body.light .nav {
+	border-bottom: 1px dashed #dfdfdf;
+	border-top: 1px dashed #dfdfdf;
+}
+/*Nav
+------------------------------------------------------------ */
+body.light .nav a {
+	color: #a0a0a0;
+	text-decoration: none;
+}
+body.light .nav a:hover {
+	color: #666;
+}
+body.light .nav li li {
+	background: #ececec;
+}
+body.light .nav li:hover,
+body.light .nav li.sfhover,
+body.light .nav .current_page_parent,
+body.light .nav .current_page_ancestor,
+body.light .nav .current-cat-parent,
+body.light .nav .current-cat,
+body.light .nav .current_page_item,
+body.light .nav .current_page_item a,
+body.light .nav .current-cat a {
+	color: #666;
+}
+body.light .nav li li:hover,
+body.light .nav li li.sfhover,
+body.light .nav li li.current_page_parent,
+body.light .nav li li.current_page_ancestor,
+body.light .nav li li.current-cat-parent,
+body.light .nav li li.current-cat,
+body.light .nav li li.current_page_item {
+	background: #dadada;
+}
+body.light .sf-sub-indicator {
+	background: url(../images/light-nav-arrows.png) no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+/* Homepage
+------------------------------------------------------------ */
+body.light .fr-home {
+	background: url(../images/light-frame-home.png) no-repeat top left;
+}
+/* Index and paged layout
+------------------------------------------------------------ */
+body.light .entry h2 a:link,
+body.light .entry h2 a:visited {
+	color: #666;
+	text-shadow: none;
+	text-decoration: none;
+}
+body.light .entry h2 a:hover {
+	color: #333;
+}
+body.light h4.arch-title {
+	text-shadow: none;
+}
+/*Entry
+---------------------------------------*/
+body.light #gallery ul li a img,
+body.light .entry img,
+body.light img.index-feature {
+	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	-o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+body.light .entry .no-style img, 
+body.light .entry a .no-style img {
+	margin: 15px 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+body.light img.page-image {
+	-moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+	-o-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+body.light .entry .comments a {
+	color: #999;
+	text-decoration: none;
+	background: url(../images/light-icon-com.png) no-repeat 0 1px;
+}
+body.light .entry .comments a:hover {
+	color: #555;
+	background: url(../images/light-icon-com.png) no-repeat 0 -18px;
+}
+body.light .entry .date {
+	color: #b3b3b3;
+	background: url(../images/light-icon-cal.png) no-repeat 0 .2em;
+}
+body.light blockquote {
+	border-left: 3px solid #dadada;
+}
+/* Single layout
+------------------------------------------------------------ */
+body.light h1.title {
+	text-shadow: none;
+}
+body.light .post .author {
+	border-bottom: 1px dashed #dfdfdf;
+	border-top: 1px dashed #dfdfdf;
+}
+/*Comments
+------------------------------------------------------------ */
+/*Body
+---------------------------------------*/
+body.light div.c-grav img {
+	background: #ccc;
+}
+body.light div.c-date {
+	color: #b3b3b3;
+}
+/*Form
+---------------------------------------*/
+
+body.light input.text-input,
+body.light form#commentform textarea {
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #555;
+}
+body.light p.comments-rss a:link,
+body.light p.comments-rss a:visited  {
+	background: url(../images/light-comments-rss.png) no-repeat 0 .25em;
+}
+/*Sidebar
+------------------------------------------------------------ */
+/*Subscribe
+---------------------------------------*/
+body.light .subscribe h5 {
+	background: #e6e6e6;
+	background: rgba(0, 0, 0, 0.05);
+	color: #888;
+}
+body.light .subscribe li a:link,
+body.light .subscribe li a:visited {
+	opacity: .4;
+}
+body.light .subscribe li a:hover {
+	opacity: 1;
+}
+body.light .subscribe li a:active {
+	opacity: .4;
+}
+/*Search
+---------------------------------------*/
+body.light #search-form input.search {
+	border: 1px solid #e6e6e6;
+	background: #efefef;
+	color: #555;
+}
+body.light #search-form input.search:focus {
+	background: #fff;
+}
+body.light #search-form input#searchsubmit {
+	color: #666;
+	background: #e8e8e8;
+	border: 1px solid #d2d2d2;
+}
+body.light #search-form input#searchsubmit:hover {
+	background: #c4c4c4;
+}
+
+/*Footer
+------------------------------------------------------------ */
+body.light #copyright {
+	color: #999;
+}
+body.light #copyright a:link,
+body.light #copyright a:visited {
+	color: #888;
+}
+
+/*Semi-transparent box
+---------------------------------------*/
+body.light .gallery.g-single,
+body.light .entry.index,
+body.light .entry.page,
+body.light div.comment-box,
+body.light div.file-not-found {
+	background: #e6e6e6;
+	background: rgba(0, 0, 0, 0.05);
+}
+body.light li.comment-author-admin div.comment-box,
+body.light li.bypostauthor div.comment-box {
+	background: #dadada;
+	background: rgba(0, 0, 0, 0.10);
+}
+/*Text shadow
+---------------------------------------*/
+body.light .entry,
+body.light #sidebar {
+	text-shadow: none;
+}
+
+/*Galleria
+---------------------------------------*/
+body.light .galleria-stage {
+	background: #ececec;
+	background: rgba( 0, 0, 0, .05 );
+}
+body.light .galleria-thumbnails .galleria-image {
+	background: #ececec; 
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+body.light .galleria-counter {
+	color: #555;
+}
+.galleria-loader {
+	background: url(../images/light-spinner.gif) no-repeat 2px 2px;
+}
+.galleria-info-text {
+	background-color: #aaa;
+	background-color: rgba( 0, 0, 0, .5 );
+}
+body.light .galleria-info-link {
+	background-color: #ccc; 
+}
+.galleria-thumb-nav-left,
+.galleria-thumb-nav-right,
+.galleria-info-link,
+.galleria-info-close,
+.galleria-image-nav-left,
+.galleria-image-nav-right {
+	background-image: url( ../images/light-classic-map.png );
+	background-repeat: no-repeat;
+}

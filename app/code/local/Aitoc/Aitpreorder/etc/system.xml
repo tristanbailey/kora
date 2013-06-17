@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+    	<aitsys>
+            <groups>
+                <modules>
+                    <fields>
+                        <Aitoc_Aitpreorder translate="label comment">
+                            <label>Pre-Order</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>aitsys/system_config_source_stores</source_model>
+                            <backend_model>aitsys/system_config_backend_stores</backend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </Aitoc_Aitpreorder>
+                    </fields>
+                </modules>
+    	    </groups>
+    	</aitsys>
+    </sections>
+</config>
+<!--
+/**
+ * Product:     Pre-Order
+ * Package:     Aitoc_Aitpreorder_1.1.23_332852
+ * Purchase ID: MpavTKfgbcrRPJ88sBMFRhGGqYnzRuVQc7WznQkxPL
+ * Generated:   2012-07-19 20:16:28
+ * File path:   app/code/local/Aitoc/Aitpreorder/etc/system.xml
+ * Copyright:   (c) 2012 AITOC, Inc.
+ */
+-->
