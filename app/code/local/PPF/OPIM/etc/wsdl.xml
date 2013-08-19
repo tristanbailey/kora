@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:typens="urn:{{var wsdl.name}}" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/"
+    name="{{var wsdl.name}}" targetNamespace="urn:{{var wsdl.name}}">
+	<types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Magento">
+			<import namespace="http://schemas.xmlsoap.org/soap/encoding/" schemaLocation="http://schemas.xmlsoap.org/soap/encoding/" />
+			<complexType name="opimorderslistArray">
+				<complexContent>
+					<restriction base="soapenc:Array">
+						<attribute ref="soapenc:arrayType" wsdl:arrayType="typens:opimorderslist[]" />
+					</restriction>
+				</complexContent>
+			</complexType>
+			<complexType name="opimorderslist">
+				<all>
+					<element name="MgId" type="xsd:int" />
+					<element name="OrderId" type="xsd:int" />
+					<element name="StoreId" type="xsd:string" />
+					<element name="Status" type="xsd:string" />
+				</all>
+			</complexType>
+			<complexType name="opimordersexport">
+				<all>
+					<element name="Order" type="typens:associativeArray" />
+					<element name="Details" type="typens:opimordersexportproductsArray" />
+					<element name="Billing" type="typens:associativeArray" />
+					<element name="Shipping" type="typens:associativeArray" />
+					<element name="Customer" type="typens:associativeArray" />
+					<element name="Addresses" type="typens:opimordersexportaddressesArray" />
+				</all>
+			</complexType>
+			<complexType name="opimordersexportproductsArray">
+				<complexContent>
+					<restriction base="soapenc:Array">
+						<attribute ref="soapenc:arrayType" wsdl:arrayType="typens:opimordersexportproducts[]" />
+					</restriction>
+				</complexContent>
+			</complexType>
+			<complexType name="opimordersexportproducts">
+				<all>
+					<element name="Product" type="typens:associativeArray" />
+				</all>
+			</complexType>
+			<complexType name="opimordersexportaddressesArray">
+				<complexContent>
+					<restriction base="soapenc:Array">
+						<attribute ref="soapenc:arrayType" wsdl:arrayType="typens:opimordersexportaddresses[]" />
+					</restriction>
+				</complexContent>
+			</complexType>
+			<complexType name="opimordersexportaddresses">
+				<all>
+					<element name="Address" type="typens:associativeArray" />
+				</all>
+			</complexType>
+			<complexType name="opimorderreconciledata">
+				<all>
+					<element name="TrackingNo" type="xsd:string" minOccurs="0" />
+				</all>
+			</complexType>
+		</schema>
+	</types>
+	<message name="opimOrdersListRequest">
+		<part name="sessionId" type="xsd:string" />
+		<part name="alreadyExported" type="xsd:int" />
+		<part name="minMgID" type="xsd:int" />
+		<part name="minDate" type="xsd:string" />
+		<part name="status" type="xsd:string" />
+		<part name="stores" type="xsd:string" />
+	</message>
+	<message name="opimOrdersListResponse">
+		<part name="order" type="typens:opimorderslistArray" />
+	</message>
+	<message name="opimOrdersExportRequest">
+		<part name="sessionId" type="xsd:string" />
+		<part name="MgID" type="xsd:int" />
+	</message>
+	<message name="opimOrdersExportResponse">
+		<part name="order" type="typens:opimordersexport" />
+	</message>
+	<message name="opimOrdersReconcileRequest">
+		<part name="sessionId" type="xsd:string" />
+		<part name="OrderID" type="xsd:int" />
+		<part name="Notify" type="xsd:int" />
+		<part name="reconcileData" type="typens:opimorderreconciledata" />
+	</message>
+	<message name="opimOrdersReconcileResponse">
+		<part name="shID" type="xsd:string" />
+	</message>
+	<portType name="{{var wsdl.handler}}PortType">
+		<operation name="opimOrdersList">
+			<documentation>PPF OPIM Exportable Orders List</documentation>
+			<input message="typens:opimOrdersListRequest" />
+			<output message="typens:opimOrdersListResponse" />
+		</operation>
+		<operation name="opimOrdersExport">
+			<documentation>PPF OPIM Export Orders</documentation>
+			<input message="typens:opimOrdersExportRequest" />
+			<output message="typens:opimOrdersExportResponse" />
+		</operation>
+		<operation name="opimOrdersReconcile">
+			<documentation>PPF OPIM Reconcile Orders</documentation>
+			<input message="typens:opimOrdersReconcileRequest" />
+			<output message="typens:opimOrdersReconcileResponse" />
+		</operation>
+	</portType>
+	<binding name="{{var wsdl.handler}}Binding" type="typens:{{var wsdl.handler}}PortType">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="opimOrdersList">
+			<soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+			<input>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="opimOrdersExport">
+			<soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+			<input>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="opimOrdersReconcile">
+			<soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+			<input>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+	</binding>
+	<service name="{{var wsdl.name}}Service">
+		<port name="{{var wsdl.handler}}Port" binding="typens:{{var wsdl.handler}}Binding">
+			<soap:address location="{{var wsdl.url}}" />
+		</port>
+	</service>
+</definitions>

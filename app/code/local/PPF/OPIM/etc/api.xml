@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<api>
+		<resources>
+			<opimorders translate="title" module="ppfopim">
+				<model>ppfopim/orders_api</model>
+				<title>PPF OPIM Orders</title>
+				<methods>
+					<list translate="title" module="ppfopim">
+						<title>PPF OPIM Exportable Orders List</title>
+						<method>items</method>
+						<acl>opimorders/list</acl>
+					</list>
+					<export translate="title" module="ppfopim">
+						<title>PPF OPIM Export Orders</title>
+						<acl>opimorders/export</acl>
+					</export>
+					<reconcile translate="title" module="ppfopim">
+						<title>PPF OPIM Reconcile Orders</title>
+						<acl>opimorders/reconcile</acl>
+					</reconcile>
+				</methods>
+				<faults module="ppfopim">
+					<module_error>
+						<code>99</code>
+						<message>Module Error. Details in error message.</message>
+					</module_error>
+					<filters_invalid>
+						<code>100</code>
+						<message>Invalid filters given. Details in error message.</message>
+					</filters_invalid>
+					<data_invalid>
+						<code>101</code>
+						<message>Invalid data given. Details in error message.</message>
+					</data_invalid>
+					<not_exists>
+						<code>102</code>
+						<message>Not exists.</message>
+					</not_exists>
+					<already_exists>
+						<code>103</code>
+						<message>Already exists.</message>
+					</already_exists>
+				</faults>
+			</opimorders>
+		</resources>
+		<resources_alias>
+			<opimOrders>opimorders</opimOrders>
+		</resources_alias>
+		<v2>
+			<resources_function_prefix>
+				<opimOrders>opimOrders</opimOrders>
+			</resources_function_prefix>
+		</v2>
+		<acl>
+			<resources>
+				<opimorders translate="title" module="ppfopim">
+					<title>PPF OPIM Orders</title>
+					<list translate="title" module="ppfopim">
+						<title>PPF OPIM Exportable Orders List</title>
+					</list>
+					<export translate="title" module="ppfopim">
+						<title>PPF OPIM Export Orders</title>
+					</export>
+					<reconcile translate="title" module="ppfopim">
+						<title>PPF OPIM Reconcile Orders</title>
+					</reconcile>
+				</opimorders>
+			</resources>
+		</acl>
+	</api>
+</config>

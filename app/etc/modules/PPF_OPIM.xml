@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<PPF_OPIM>
+			<active>true</active>
+			<codePool>local</codePool>
+			<depends>
+				<Mage_Catalog />
+				<Mage_Customer />
+				<Mage_Sales />
+				<Mage_Api />
+			</depends>
+		</PPF_OPIM>
+	</modules>
+</config>
