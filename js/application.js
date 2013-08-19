@@ -104,6 +104,7 @@ $j(document).ready(function() {
 
   if ($j(location).attr('pathname') == "/") {
     var slides = '<div class="blueberry"><ul class="slides">';
+    slides += '<li><a href="/shop"><img src="/skin/frontend/default/kora/images/slides/homepage-slide-5.jpg" /></a></li>';
     slides += '<li><a href="/shop"><img src="/skin/frontend/default/kora/images/slides/homepage-slide-1.jpg" /></a></li>';
     slides += '<li><a href="/pages/fabric/yak-wool-performance"><img src="/skin/frontend/default/kora/images/slides/homepage-slide-2.jpg" /></a></li>';
     slides += '<li><a href="/blog/category/ambassadors/"><img src="/skin/frontend/default/kora/images/slides/homepage-slide-3.jpg" /></a></li>';

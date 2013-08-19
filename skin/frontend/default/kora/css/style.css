@@ -612,6 +612,7 @@ span#amstockstatus-stockalert p.alert-stock a, span#alerts p.alert-stock a {
 }
 
 div#shipping-notice {
+  display: none;
   float: left;
   margin: 0px 0px;
   width: 120px;
@@ -1278,7 +1279,7 @@ span.wishlist-link {
   padding: 0px 5px;
   font-size: 11px;
   margin-left: 8px;  
-  margin-top: 10px;
+  margin-top: -10px;
   margin-bottom: 8px;
 }
 

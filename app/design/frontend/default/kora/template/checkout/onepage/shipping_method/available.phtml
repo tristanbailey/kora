@@ -27,7 +27,7 @@
 <?php /** @var $this Mage_Checkout_Block_Onepage_Shipping_Method_Available */ ?>
 <?php $_shippingRateGroups = $this->getShippingRates(); ?>
 <?php if (!$_shippingRateGroups): ?>
-    <p><?php echo $this->__('Sorry, no quotes are available for this order at this time.') ?></p>
+    <p><?php echo $this->__('Sorry, we are currently unable to deliver to this shipping address. Please get in touch with us using one of the methods on the <a href="/pages/contact">Contact Us</a> page and we will see what we can do.') ?></p>
 <?php else: ?>
     <dl class="sp-methods">
     <?php $shippingCodePrice = array(); ?>
