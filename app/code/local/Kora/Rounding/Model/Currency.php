@@ -1,3 +1,5 @@
+<?php
+
 /*
 http://www.tall-paul.co.uk/2012/03/28/magento-round-up-currency-conversions/
 */
