@@ -28,6 +28,18 @@
     <div id="checkout-shipping-method-load">
         <?php echo $this->getChildHtml('available') ?>
     </div>
+    <div id="checkout-shipping-method-explanation">
+      <h4>Standard</h4>
+      <ul>
+        <li>UK - 2 working days</li>
+        <li>EU - 2-7 days</li>
+        <li>USA &amp; Canada - 3-6 days</li>
+        <li>Rest of World - 3-8 days</li>
+      </ul>
+      <h4>Express</h4>
+      <p>Next working day to all available locations. Please note that orders placed on Friday afternoon will be delivered on the following Tuesday.</p>
+    </div>
+
     <script type="text/javascript">
     //<![CDATA[
         var shippingMethod = new ShippingMethod('co-shipping-method-form', "<?php echo $this->getUrl('checkout/onepage/saveShippingMethod') ?>");

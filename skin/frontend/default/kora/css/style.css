@@ -1479,3 +1479,17 @@ span#banner {
 span#banner a, span#banner a:visited {
   color: white;
 }
+
+div#checkout-shipping-method-load {
+  float: left;
+  width: 40%;
+}
+
+div#checkout-shipping-method-explanation {
+  font-size: 0.8em; 
+}
+
+div#onepage-checkout-shipping-method-additional-load {
+  clear: both;
+}
+
