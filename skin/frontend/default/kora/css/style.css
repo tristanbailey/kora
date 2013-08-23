@@ -1480,6 +1480,12 @@ span#banner a, span#banner a:visited {
   color: white;
 }
 
+div#checkout-shipping-method-explanation {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
 div#checkout-shipping-method-explanation div {
   float: left;
   font-size: 0.8em; 
