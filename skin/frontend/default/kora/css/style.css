@@ -1085,16 +1085,16 @@ div.discount-form .input-text {
   width: 180px;
 }
 
-#discount-coupon-form {
+#discount_coupon_form {
   position: relative;
 }
-#discount-coupon-form .discount-form > span {
+#discount_coupon_form .discount-form > span {
   padding: 0 15px 0 8px;
 }
-#discount-coupon-form #coupon_code {
+#discount_coupon_form #coupon_code {
   width: 202px;
 }
-#discount-coupon-form .buttons-set {
+#discount_coupon_form .buttons-set {
   position: absolute;
   top: 2px; right: 10px;
 }

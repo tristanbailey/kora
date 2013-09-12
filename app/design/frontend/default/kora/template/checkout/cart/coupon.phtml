@@ -24,7 +24,7 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<form id="discount-coupon-form" class="input" action="<?php echo $this->getUrl('checkout/cart/couponPost') ?>" method="post">
+<form id="discount_coupon_form" class="input" action="<?php echo $this->getUrl('checkout/cart/couponPost') ?>" method="post">
     <div class="discount">
         
         <div class="discount-form">
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="buttons-set">
-                <button type="button" title="<?php echo $this->__('Redeem Code') ?>" class="button" onclick="javascript:discount-coupon-form.submit(false)" value="<?php echo $this->__('Redeem Code') ?>"><span><span><?php echo $this->__('Redeem Code') ?></span></span></button>
+                <button type="button" title="<?php echo $this->__('Redeem Code') ?>" class="button" onclick="javascript:discount_coupon_form.submit(false)" value="<?php echo $this->__('Redeem Code') ?>"><span><span><?php echo $this->__('Redeem Code') ?></span></span></button>
                 <?php if(strlen($this->getCouponCode())): ?>
                     &nbsp; <button type="button" title="<?php echo $this->__('Cancel Code') ?>" class="button" onclick="discountForm.submit(true)" value="<?php echo $this->__('Cancel Code') ?>"><span><span><?php echo $this->__('Cancel Code') ?></span></span></button>
                 <?php endif;?>
@@ -47,7 +47,7 @@
 <script type="text/javascript">
 //<![CDATA[
 
-var discountForm = new VarienForm('discount-coupon-form');
+var discountForm = new VarienForm('discount_coupon_form');
 discountForm.submit = function (isRemove) {
     if (isRemove) {
         $('coupon_code').removeClassName('required-entry');
