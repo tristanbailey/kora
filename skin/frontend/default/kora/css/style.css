@@ -1078,7 +1078,12 @@ div.discount-form .buttons-set .button {
 
 div.discount-form .buttons-set #cancel_button {
   margin-top: -17px;
-  margin-right: 2px;
+  margin-right: 5px;
+}
+
+div.discount-form .buttons-set #redeem_button {
+  margin-top: 8px;
+  margin-right: 5px;
 }
 
 div.discount-form .buttons-set .button span {
@@ -1098,7 +1103,7 @@ div.discount-form .input-text {
   padding: 0 15px 0 8px;
 }
 #discount_coupon_form #coupon_code {
-  width: 202px;
+  width: 180px;
 }
 #discount_coupon_form .buttons-set {
   position: absolute;
