@@ -36,7 +36,9 @@
                 </div>
             </div>
             <div class="buttons-set">
-                <button type="button" title="<?php echo $this->__('Redeem Code') ?>" class="button" onclick="javascript:discountForm.submit(false)" value="<?php echo $this->__('Redeem Code') ?>"><span><span><?php echo $this->__('Redeem Code') ?></span></span></button>
+                <?php if(strlen($this->getCouponCode())==0): ?>
+                <button type="button" title="<?php echo $this->__('Redeem Code') ?>" class="button" onclick="discountForm.submit(false)" value="<?php echo $this->__('Redeem Code') ?>"><span><span><?php echo $this->__('Redeem Code') ?></span></span></button>
+                <?php endif;?>
                 <?php if(strlen($this->getCouponCode())): ?>
                     &nbsp; <button type="button" title="<?php echo $this->__('Cancel Code') ?>" class="button" onclick="discountForm.submit(true)" value="<?php echo $this->__('Cancel Code') ?>"><span><span><?php echo $this->__('Cancel Code') ?></span></span></button>
                 <?php endif;?>
