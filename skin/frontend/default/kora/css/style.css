@@ -1061,6 +1061,7 @@ div.input-box {
 div.discount {
   background: #C0B561;
   padding: 5px;
+  overflow: auto;
 }
 
 div.discount-form #input {
@@ -1073,6 +1074,11 @@ div.discount-form .buttons-set {
 
 div.discount-form .buttons-set .button {
   margin-top: -5px;
+}
+
+div.discount-form .buttons-set #cancel_button {
+  margin-top: -17px;
+  margin-right: 2px;
 }
 
 div.discount-form .buttons-set .button span {
@@ -1103,7 +1109,7 @@ body.checkout-cart-index div.col2-set div.col-2 {
   width: 30%;
 }
 
-#shopping-cart-totals-table td {
+#shopping-cart-totals-table td, #shopping-cart-totals-table th {
   background: #FFFFFF;
 }
 

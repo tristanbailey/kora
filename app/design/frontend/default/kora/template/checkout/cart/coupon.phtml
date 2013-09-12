@@ -35,31 +35,22 @@
                     <input class="input-text" id="coupon_code" name="coupon_code" value="<?php echo $this->htmlEscape($this->getCouponCode()) ?>" />
                 </div>
             </div>
-            <div class="buttons-set">
-                <?php if(strlen($this->getCouponCode())==0): ?>
-                <button type="button" title="<?php echo $this->__('Redeem Code') ?>" class="button" onclick="discountForm.submit(false)" value="<?php echo $this->__('Redeem Code') ?>"><span><span><?php echo $this->__('Redeem Code') ?></span></span></button>
-                <?php endif;?>
-                <?php if(strlen($this->getCouponCode())): ?>
-                    &nbsp; <button type="button" title="<?php echo $this->__('Cancel Code') ?>" class="button" onclick="discountForm.submit(true)" value="<?php echo $this->__('Cancel Code') ?>"><span><span><?php echo $this->__('Cancel Code') ?></span></span></button>
-                <?php endif;?>
-            </div>            
+            <div class="buttons-set"><?php if(strlen($this->getCouponCode())==0): ?><button type="button" title="<?php echo $this->__('Redeem Code') ?>" class="button" onclick="discountForm.submit(false)" value="<?php echo $this->__('Redeem Code') ?>"><span><span><?php echo $this->__('Redeem Code') ?></span></span></button><?php endif;?><?php if(strlen($this->getCouponCode())): ?>&nbsp; <button type="button" title="<?php echo $this->__('Cancel Code') ?>" id="cancel_button" class="button" onclick="discountForm.submit(true)" value="<?php echo $this->__('Cancel Code') ?>"><span><span><?php echo $this->__('Cancel Code') ?></span></span></button><?php endif;?></div>            
         </div>
     </div>
 </form>
 <script type="text/javascript">
 //<![CDATA[
-document.observe('dom:loaded', function() {
-    var discountForm = new VarienForm('discount_coupon_form');
-    discountForm.submit = function (isRemove) {
-        if (isRemove) {
-            $('coupon_code').removeClassName('required-entry');
-            $('remove-coupon').value = "1";
-        } else {
-            $('coupon_code').addClassName('required-entry');
-            $('remove-coupon').value = "0";
-        }
-        return VarienForm.prototype.submit.bind(discountForm)();
+var discountForm = new VarienForm('discount_coupon_form');
+discountForm.submit = function (isRemove) {
+    if (isRemove) {
+        $('coupon_code').removeClassName('required-entry');
+        $('remove-coupon').value = "1";
+    } else {
+        $('coupon_code').addClassName('required-entry');
+        $('remove-coupon').value = "0";
     }
-});
+    return VarienForm.prototype.submit.bind(discountForm)();
+}
 //]]>
 </script>
