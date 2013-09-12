@@ -48,7 +48,7 @@
 </form>
 <script type="text/javascript">
 //<![CDATA[
-
+$(document).ready(function() {
 var discountForm = new VarienForm('discount_coupon_form');
 discountForm.submit = function (isRemove) {
     if (isRemove) {
@@ -60,5 +60,6 @@ discountForm.submit = function (isRemove) {
     }
     return VarienForm.prototype.submit.bind(discountForm)();
 }
+});
 //]]>
 </script>
