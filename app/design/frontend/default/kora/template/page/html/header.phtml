@@ -99,10 +99,11 @@
 
   <div id="login" class="col span_4">
     <?php if (!$loggedIn) { ?>
-      <a id="login" href="<?php echo $customerHelper->getLoginUrl(); ?>">Log in</a>
+      <a id="login" href="<?php echo $customerHelper->getLoginUrl(); ?>">Log in</a> | 
+      <a href="<?php echo $checkoutHelper->getCartUrl(); ?>">Basket (<?php echo $checkoutHelper->getItemsCount(); ?>)</a>
     <? } else { ?>
       <a href="<?php echo $customerHelper->getDashboardUrl(); ?>">My Account</a> | 
-      <a href="<?php echo $checkoutHelper->getCartUrl(); ?>">Basket</a> | 
+      <a href="<?php echo $checkoutHelper->getCartUrl(); ?>">Basket (<?php echo $checkoutHelper->getItemsCount(); ?>)</a> | 
       <a href="<?php echo $customerHelper->getLogoutUrl(); ?>">Log out</a>
     <? } ?>
     | <a href="/pages/contact/customer-service">Service</a>

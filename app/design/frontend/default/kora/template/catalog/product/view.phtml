@@ -40,6 +40,7 @@ $_description = $this->getProduct()->getDescription();
 $_shortDescription = $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description');
 $_feedback = "";
 $_sizing = "";
+$_press = "";
 
 if ($_product->hasData("athletefeedback")) {
     $_feedback = $_product->getData("athletefeedback");
@@ -47,6 +48,10 @@ if ($_product->hasData("athletefeedback")) {
 
 if ($_product->hasData("sizing_guide")) {
     $_sizing = $_product->getData("sizing_guide");
+}
+
+if ($_product->hasData("press")) {
+    $_press = $_product->getData("press");
 }
 
 $this->getLayout()->getBlock('head')->setTitle('Your Title');
@@ -88,6 +93,9 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
             <li><a href="#description">Description</a></li>
             <li><a href="#fabric">Fabric</a></li>
             <li><a href="#reviews">Athlete Feedback</a></li>
+            <?php if ($_press) { ?>
+                <li><a href="#press">Press</a></li>
+            <?php } ?>
             <li class="last"><a href="#sizing">Sizing</a></li>
           </ul>
           <div id="description">
@@ -120,6 +128,15 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
             <br/><br/><br/>
             </div>
           </div>
+          <?php if ($_press) { ?>
+          <div id="press">
+            <div>
+            
+              <?php echo $_press; ?>
+            <br/><br/><br/>
+            </div>
+          </div>
+          <?php } ?>
           <div id="sizing">
             <div>
             <?php

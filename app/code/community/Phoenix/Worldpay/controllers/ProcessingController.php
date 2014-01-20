@@ -90,7 +90,7 @@ class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_A
             } elseif ($request['transStatus'] == 'C') {
                 $this->_processCancel($request);
             } else {
-                Mage::throwException('Transaction was not successfull.');
+                Mage::throwException('Transaction was not successful.');
             }
         } catch (Mage_Core_Exception $e) {
             $this->_debug('Worldpay response error: ' . $e->getMessage());
@@ -149,11 +149,12 @@ class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_A
      */
     protected function _checkReturnedPost()
     {
-            // check request type
-        if (!$this->getRequest()->isPost())
+        // check request type
+        if (!$this->getRequest()->isPost()) {
             Mage::throwException('Wrong request type.');
+        }
 
-            // validate request ip coming from WorldPay/RBS subnet
+        // validate request ip coming from WorldPay/RBS subnet
         $helper = Mage::helper('core/http');
         if (method_exists($helper, 'getRemoteAddr')) {
             $remoteAddr = $helper->getRemoteAddr();
@@ -161,30 +162,33 @@ class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_A
             $request = $this->getRequest()->getServer();
             $remoteAddr = $request['REMOTE_ADDR'];
         }
-        if (substr($remoteAddr,0,11) != '155.136.16.') {
-            Mage::throwException('IP can\'t be validated as WorldPay-IP.');
+        if (!preg_match('/\.worldpay\.com$/', gethostbyaddr($remoteAddr))) {
+            Mage::throwException('Domain can\'t be validated as WorldPay-Domain.');
         }
 
-            // get request variables
+        // get request variables
         $request = $this->getRequest()->getPost();
-        if (empty($request))
+        if (empty($request)) {
             Mage::throwException('Request doesn\'t contain POST elements.');
+        }
 
-            // check order id
-        if (empty($request['MC_orderid']) || strlen($request['MC_orderid']) > 50)
+        // check order id
+        if (empty($request['MC_orderid']) || strlen($request['MC_orderid']) > 50) {
             Mage::throwException('Missing or invalid order ID');
+        }
 
-            // load order for further validation
+        // load order for further validation
         $this->_order = Mage::getModel('sales/order')->loadByIncrementId($request['MC_orderid']);
-        if (!$this->_order->getId())
+        if (!$this->_order->getId()) {
             Mage::throwException('Order not found');
+        }
 
         $this->_paymentInst = $this->_order->getPayment()->getMethodInstance();
 
-            // check transaction password
-        if ($this->_paymentInst->getConfigData('transaction_password') != $request['callbackPW'])
+        // check transaction password
+        if ($this->_paymentInst->getConfigData('transaction_password') != $request['callbackPW']) {
             Mage::throwException('Transaction password wrong');
-
+        }
 
         return $request;
     }
@@ -204,19 +208,21 @@ class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_A
         }
 
         // check transaction amount
-        if ($price != $request['authAmount'])
+        if ($price != $request['authAmount']) {
             Mage::throwException('Transaction currency doesn\'t match.');
+        }
 
         // check transaction currency
-        if ($currency != $request['authCurrency'])
+        if ($currency != $request['authCurrency']) {
             Mage::throwException('Transaction currency doesn\'t match.');
+        }
 
         // save transaction information
         $this->_order->getPayment()
-        	->setTransactionId($request['transId'])
-        	->setLastTransId($request['transId'])
-        	->setCcAvsStatus($request['AVS'])
-        	->setCcType($request['cardType']);
+            ->setTransactionId($request['transId'])
+            ->setLastTransId($request['transId'])
+            ->setCcAvsStatus($request['AVS'])
+            ->setCcType($request['cardType']);
 
         // save fraud information
         if (!empty($request['wafMerchMessage'])) {
