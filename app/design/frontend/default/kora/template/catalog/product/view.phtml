@@ -31,7 +31,7 @@
  * @see Mage_Review_Block_Product_View
  */
 ?>
-<?php 
+<?php
 
 $_helper = $this->helper('catalog/output');
 $_product = $this->getProduct();
@@ -73,7 +73,7 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
     <div class="product-img-box">
         <div class="product-name">
             <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
-        </div>    
+        </div>
         <?php echo $this->getChildHtml('media') ?>
 
         <!-- www.addthis.com -->
@@ -85,7 +85,7 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
             <a class="addthis_counter addthis_pill_style"></a>
         </div>
 
-    </div>    
+    </div>
 
     <div class="product-detail-box">
         <div id="tabs">
@@ -102,7 +102,7 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
             <div>
                 <?php
                 if ($_description) {
-                echo $_description; 
+                echo $_description;
                 }
                 ?>
                 <br/><br/><br/>
@@ -131,7 +131,7 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
           <?php if ($_press) { ?>
           <div id="press">
             <div>
-            
+
               <?php echo $_press; ?>
             <br/><br/><br/>
             </div>
@@ -149,6 +149,8 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
           </div>
         </div>
 
+        <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+
         <div class="product-shop">
 
             <!-- Availability & Price -->
@@ -157,7 +159,7 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
             <span id="alerts">
                 <?php echo $this->getChildHtml('alert_urls') ?>
             </span>
-                
+
             <div style="width: 60%; float: left;">
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                     <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
@@ -168,7 +170,7 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
 
             <?php if ($_product->isSaleable()):?>
                 <div id="shipping-notice">
-                    
+
                 </div>
 
                 <span class="wishlist-link">
@@ -179,16 +181,18 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
         </div>
     </div>
 
-            <?php echo $this->getChildHtml('extrahint') ?>
-
-            <?php echo $this->getChildHtml('other');?>
-
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif;?>
-             
-
     </form>
+
+    <?php echo $this->getChildHtml('product_additional_data') ?>
+
+    <?php echo $this->getChildHtml('extrahint') ?>
+
+    <?php echo $this->getChildHtml('other');?>
+
+    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+        <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+    <?php endif;?>
+
     <script type="text/javascript">
     //<![CDATA[
         var productAddToCartForm = new VarienForm('product_addtocart_form');
@@ -249,4 +253,3 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
 <?php #endforeach;?>
 <?php #echo $this->getChildHtml('upsell_products') ?>
 <?php #echo $this->getChildHtml('product_additional_data') ?>
- 

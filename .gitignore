@@ -1,2 +1,3 @@
 app/etc/*.xml
 releases
+.DS_Store

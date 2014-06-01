@@ -20,7 +20,7 @@
 		<remove name="left.permanent.callout"/>
 		<remove name="paypal.partner.right.logo"/>
 		<remove name="catalog.compare.sidebar"/>
-		
+
 		<!--
 			Add the local stylesheet
 		-->
@@ -53,7 +53,7 @@
       <action method="addJs"><script>jscrollpane/jquery.mousewheel.js</script></action>
       <!-- <action method="addJs"><script>jscrollpane/jquery.jscrollpane.min.js</script></action> -->
       <action method="addJs"><script>jscrollpane/jquery.jscrollpane.js</script></action>
-        
+
 		</reference>
 
 		<!-- <reference name="root"> -->
@@ -65,12 +65,12 @@
 
 		<!-- <reference name="header">
 			<block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
-		</reference>		
+		</reference>
 
 		<reference name="footer">
 			<block type="catalog/navigation" name="catalog.topnav" template="catalog/navigation/top.phtml"/>
     </reference>		 -->
-						
+
 	</default>
 
 	<!-- <customer_account_login translate="label">
@@ -98,9 +98,9 @@
   </customer_account>
 
 	<!-- CATALOG -->
-	
+
 	<catalog_category_default>
-		
+
 		<reference name="root">
 		  <action method="setTemplate"><template>page/2columns-norightcol.phtml</template>
 		    <action method="setIsHandle"><applied>1</applied></action>
@@ -119,7 +119,7 @@
     <remove name="right"/>
 
 		<!-- <reference name="mana.catalog.leftnav"> -->
-    	
+
       <!-- ADD PAGER TO CATALOG VIEW -->
       <!-- <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
         <block type="page/html_pager" name="product_list_toolbar_pager"/>
@@ -131,20 +131,39 @@
       where this block is referenced.
       -->
       <!-- <block type="catalog/product_list_toolbar" name="product_list_toolbar_sort" template="catalog/product/list/toolbar-sort.phtml"/> -->
-      
+
     <!-- </reference> -->
-		
+
 	</catalog_category_default>
+
+  <review_product_list translate="label">
+    <label>Catalog Product Reviews List</label>
+    <reference name="root">
+        <action method="setTemplate"><template>page/2columns-norightcol.phtml</template></action>
+    </reference>
+    <reference name="left">
+      <remove name="tags_popular"/> <!-- remove tags module -->
+      <remove name="left.newsletter"/> <!-- remove newsletter signup -->
+      <block type="catalog/navigation" name="catalog.category.list" as="categorylist" template="catalog/category/list.phtml"/>
+      <block type="catalog/product_list_related" name="catalog.product.related" after="-" template="catalog/product/list/related.phtml"/>
+    </reference>
+  </review_product_list>
+
+  <review_product_view translate="label">
+    <reference name="root">
+        <action method="setTemplate"><template>page/2columns-norightcol.phtml</template></action>
+    </reference>
+  </review_product_view>
 
 	<catalog_product_view translate="label">
     <label>Catalog Product View (Any)</label>
-		
+
     <reference name="root">
 			<action method="setTemplate"><template>page/2columns-norightcol.phtml</template>
 				<action method="setIsHandle"><applied>1</applied></action>
 			</action>
 		</reference>
-    
+
     <reference name="left">
       <remove name="tags_popular"/> <!-- remove tags module -->
       <remove name="left.newsletter"/> <!-- remove newsletter signup -->
@@ -175,7 +194,7 @@
     </reference>
 
     <reference name="mana.catalogsearch.leftnav">
-      
+
       <!-- ADD PAGER TO CATALOG VIEW -->
       <!-- <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
         <block type="page/html_pager" name="product_list_toolbar_pager"/>
@@ -187,7 +206,7 @@
       where this block is referenced.
       -->
 <!--       <block type="catalog/product_list_toolbar" name="product_list_toolbar_sort" template="catalog/product/list/toolbar-sort.phtml"/>
- -->      
+ -->
     </reference>
 
   </catalogsearch_result_index>
@@ -212,11 +231,11 @@
   </checkout_onepage_success>
   <checkout_onepage_failure>
     <remove name="right"/>
-    <remove name="left"/>    
+    <remove name="left"/>
     <reference name="root">
       <action method="setTemplate"><template>page/1column.phtml</template></action>
     </reference>
-  </checkout_onepage_failure>  
+  </checkout_onepage_failure>
 
 
 <!--   <wordpress_default>
