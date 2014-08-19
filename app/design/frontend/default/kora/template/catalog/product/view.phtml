@@ -96,7 +96,14 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
             <?php if ($_press) { ?>
                 <li><a href="#press">Press</a></li>
             <?php } ?>
-            <li class="last"><a href="#sizing">Sizing</a></li>
+            <?php if ($_returns) { ?>
+                <li><a href="#sizing">Sizing</a></li>
+                <li class="last"><a href="#returns">Returns</a></li>
+            <?php }
+            else
+            { ?>
+                <li class="last"><a href="#sizing">Sizing</a></li>
+            <?php } ?>
           </ul>
           <div id="description">
             <div>
@@ -147,6 +154,16 @@ $this->getLayout()->getBlock('head')->setTitle('Your Title');
             <br/><br/><br/>
             </div>
           </div>
+          
+          <?php if ($_returns) { ?>
+          <div id="returns">
+            <div>
+
+              <?php echo $_returns; ?>
+            <br/><br/><br/>
+            </div>
+          </div>
+          <?php } ?>
         </div>
 
         <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
