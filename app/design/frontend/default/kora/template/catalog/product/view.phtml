@@ -53,6 +53,11 @@ if ($_product->hasData("sizing_guide")) {
 if ($_product->hasData("press")) {
     $_press = $_product->getData("press");
 }
+// custom varriable not per product
+if (Mage::getModel('core/variable')->loadByCode('angle')->getData('product_returns')) {
+    $_returns = Mage::getModel('core/variable')->loadByCode('angle')->getData('product_returns');
+}
+
 
 $this->getLayout()->getBlock('head')->setTitle('Your Title');
 
