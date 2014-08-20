@@ -54,8 +54,11 @@ if ($_product->hasData("press")) {
     $_press = $_product->getData("press");
 }
 // custom varriable not per product
-if (Mage::getModel('core/variable')->loadByCode('angle')->getData('product_returns')) {
-    $_returns = Mage::getModel('core/variable')->loadByCode('angle')->getData('product_returns');
+if (Mage::getModel('core/variable')->setStoreId(Mage::app()->getStore()->getId())->loadByCode('product_returns')->getValue('html') != '') {
+    $_returns = Mage::getModel('core/variable')
+        ->setStoreId(Mage::app()->getStore()->getId())
+        ->loadByCode('product_returns')
+        ->getValue('html');
 }
 
 
