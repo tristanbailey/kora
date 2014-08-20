@@ -453,12 +453,12 @@ div.category-products ul li.first {
   margin-top: 5px;
 }
 
-#press, #sizing, #description, #fabric, #reviews, #press, .product-detail-box, .product-view .product-shop {
+#press, #sizing, #description, #fabric, #reviews, #press, #returns, .product-detail-box, .product-view .product-shop {
   background: #6b6b6b;
   color: #FFF;
 }
 
-#press, #sizing, #description, #fabric, #reviews, #press {
+#press, #sizing, #description, #fabric, #reviews, #press, #returns {
   background: #75787B;
   height: 385px;
 }
