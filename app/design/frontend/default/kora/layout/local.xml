@@ -33,16 +33,16 @@
 			<action method="addJs"><script>application.js</script></action>
 			<action method="addJs"><script>supersized.3.2.7.js</script></action>
 			<action method="addJs"><script>supersized.shutter.js</script></action>
-			<action method="addJs"><script>jquery.colorbox - min.js</script></action>
+			<action method="addJs"><script>jquery.colorbox-min.js</script></action>
 			<action method="addJs"><script>jquery.easing.min.js</script></action>
 			<!-- <action method="addJs"><script>jquery.jqzoom-core-pack.js</script></action> -->
-			<action method="addJs"><script>jquery.jqzoom - core.js</script></action>
-			<action method="addJs"><script>jquery - ui - 1.8.19.custom.min.js</script></action>
+			<action method="addJs"><script>jquery.jqzoom-core.js</script></action>
+			<action method="addJs"><script>jquery-ui-1.8.19.custom.min.js</script></action>
 			<action method="addJs"><script>pirobox_extended.js</script></action>
-			<action method="addJs"><script>jscrollpane / mwheelIntent.js</script></action>
-			<action method="addJs"><script>jscrollpane / jquery.mousewheel.js</script></action>
+			<action method="addJs"><script>jscrollpane/mwheelIntent.js</script></action>
+			<action method="addJs"><script>jscrollpane/jquery.mousewheel.js</script></action>
 			<!-- <action method="addJs"><script>jscrollpane/jquery.jscrollpane.min.js</script></action> -->
-			<action method="addJs"><script>jscrollpane / jquery.jscrollpane.js</script></action>
+			<action method="addJs"><script>jscrollpane/jquery.jscrollpane.js</script></action>
 		</reference>
 		<!-- <reference name="root"> -->
 		<!-- <action method="setTemplate"><template>page/trunk-4columns.phtml</template> -->
